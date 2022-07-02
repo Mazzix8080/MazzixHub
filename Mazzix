@@ -1,0 +1,50 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Mazzix Hub", "BloodTheme")
+local Hubs = Window:NewTab("Hubs")
+local Player = Window:NewTab("Player")
+local Games = Window:NewTab("Games")
+local FE = Window:NewTab("FE")
+local Admin = Window:NewTab("Admin")
+
+
+ -- PLAYER
+    local PlayerSection = Player:NewSection("Player")
+ 
+    PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(v)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    end)
+ 
+    PlayerSection:NewSlider("Jumppower", "Changes the jumppower", 250, 50, function(v)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+    end)
+    
+    PlayerSection:NewButton("Infinite Jump", "Loads Infinite Jump", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Mazzix8080/InfiniteJump/main/Infinite%20Jump.txt"))()
+end)
+    
+-- Hubs
+    local HubsSection = Hubs:NewSection("Hubs")
+    
+    HubsSection:NewButton("DomainX", "DomainX is a multi purpose hub", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexsoftworks/DomainX/main/source',true))()
+end)
+
+    HubsSection:NewButton("OwlHub", "Owlhub is a multi game support hub, some games like arsenal", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+
+    HubsSection:NewButton("Weinz Hub", "MM2, TOH, Mad City, Pet Sim X", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/weiny-ez/w-main/main/loader.lua'))()
+end)
+--Admin
+    local AdminSection = Admin:NewSection("Admin")
+
+    AdminSection:NewButton("Fates Admin", "Fates Admin is a multi command admin", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
+end)
+
+    AdminSection:NewButton("Infinite Yield", "Infinite Yield is a simple admin", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+
