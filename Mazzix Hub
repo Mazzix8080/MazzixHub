@@ -1,0 +1,254 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Mazzix Hub", "BloodTheme")
+
+ -- PLAYER
+    local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+ 
+    PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(v)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    end)
+ 
+    PlayerSection:NewSlider("Jumppower", "Changes the jumppower", 250, 50, function(v)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+    end)
+    
+    PlayerSection:NewButton("Infinite Jump", "Loads Infinite Jump", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Mazzix8080/InfiniteJump/main/Infinite%20Jump.txt"))() 
+end)
+
+    PlayerSection:NewToggle("Bypassed Toggle Fly", "Fly and Unfly", function(state)
+    if state then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
+
+Fly(true)
+    else
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
+
+Fly(false)
+    end
+end)
+    
+    PlayerSection:NewButton("Flight", "Why walk when you can fly? Press F to toggle", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/0MFmbDUF", true))()
+end)
+
+    PlayerSection:NewButton("CTRL+Click TP", "CTRL+Click to TP Anywhere!", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/pgCVp5gz"))()
+end)
+
+    PlayerSection:NewTextBox("Goto", "Go to a player.", function(PlayerTeleportName)
+local playerone = game.Players.LocalPlayer.Character
+local playertwo = game.Workspace:FindFirstChild(PlayerTeleportName)
+playerone.HumanoidRootPart.CFrame = playertwo.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
+end)
+
+-- Hubs
+    local Hubs = Window:NewTab("Hubs")
+    local HubsSection = Hubs:NewSection("Hubs")
+    
+    HubsSection:NewButton("DomainX", "DomainX is a multi purpose hub", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexsoftworks/DomainX/main/source',true))()
+end)
+
+    HubsSection:NewButton("OwlHub", "Owlhub is a multi game support hub, some games like arsenal", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+
+    HubsSection:NewButton("Weinz Hub", "MM2, TOH, Mad City, Pet Sim X", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/weiny-ez/w-main/main/loader.lua'))()
+end)
+
+    HubsSection:NewButton("Pog Hub", "Too many games to put so just look the supported games up", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/03koios/Loader/main/Loader.lua"))()
+end)
+
+    HubsSection:NewButton("Proxima Hub", "Destruction Sim, TOH, Ledgends of Speed, More", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
+    end)
+
+    HubsSection:NewButton("V.G Hub", "Over 60+ games supported", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+    end)
+
+    HubsSection:NewButton("Sirius", "A really good hub for multiple games", function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Sirius/request/Loader'))()
+    end)
+
+    HubsSection:NewButton("KeyBrew Hub", "A keyless hub Pet Sim X/Multiverse Fighter Sim/Arsenal", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/borntodiekuv/KeybrewHub/main/Main"))()
+   end)
+
+   HubsSection:NewButton("Yes Hub", "Press F9 to see all games", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/03koios/Loader/main/Loader.lua"))()
+   print("Online Business Simulator 2")
+   print("Shoe Simulator")
+   print("Tower of Hell")
+   print("Tower of Mistery")
+   print("Ultamate Tower Defense")
+   print("Collect All Pets!")
+   print("Giant Survival")
+   print("Natural Disaster Survival")
+   print("Legends of Speed")
+   print("Base Battles")
+   print("Animal Simulator")
+   print("Kick Off")
+   print("Car Dealership Tycoon")
+   print("Destruction Simulator")
+   print("Lucky Blocks Battlegrounds")
+   print("Tsunami Game")
+   print("Build a Boat to Survive")
+   print("Build a Boat for Treasure")
+   print("Tapping Legends X")
+   print("Ninja Legends")
+   print("Eating Simulator")
+   print("THE KEY IS Dripsage")
+   end)
+--Games
+    local Games = Window:NewTab("Games")
+    local GamesSection = Games:NewSection("Lucky Blocks Battlegrounds")
+
+    GamesSection:NewButton("Orion Hub Lucky Blocks", "This executes orion hubs Lucky Block Battlegrounds script", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/stillnotgivingafuck/LuckyBlocks/main/loader.lua')))()
+    end)
+--
+    local GamesSection = Games:NewSection("Flee The Facility")
+
+    GamesSection:NewButton("V.G Hub Flee The Facility", "This executes V.G Hubs Flee The Facility script", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+    end)
+--
+    local GamesSection = Games:NewSection("Work At A Pizza Place")
+
+    GamesSection:NewButton("Work At A Pizza Place GUI", "Autofarm, Teleports, More", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/bb2f1182a224999682a2d1a87aa8517a/raw/66c7791224be0434b23938ca26244238649d0143/ameicaa", true))()
+    end)
+
+--
+    local GamesSection = Games:NewSection("Pressure Wash Simulator")
+
+    GamesSection:NewButton("Infinite Money", "Execute then rejoin game", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Mazzix8080/Scripts/main/Infinite%20Money')))()
+    end)
+--
+    local GamesSection = Games:NewSection("Build a Boat for Treasure")
+
+    GamesSection:NewButton("Best Autofarm/More", "Cappuccino V5", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/boop71/cappuccino-new/main/loader.lua'))()
+    end)
+
+    GamesSection:NewButton("Op Script", "Autofarm/Trolls/More", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Mazzix8080/Scripts/main/Rule2Ok'))()
+    end)
+
+--
+    local GamesSection = Games:NewSection("Kat")
+
+    GamesSection:NewButton("Silent Aim/ESP", "OwlHub", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt'))()
+    end)
+
+--
+    local GamesSection = Games:NewSection("Prison Life")
+
+    GamesSection:NewButton("OutLaws", "Guns/Kill Aura/More", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MostafaXc00dy/MostafaXc00dy/main/Prison%20Life.lua"))()
+    end)
+
+--
+    
+--Admin
+    local Admin = Window:NewTab("Admin")
+    local AdminSection = Admin:NewSection("Admin")
+
+    AdminSection:NewButton("Fates Admin", "Fates Admin is a multi command admin", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
+end)
+
+    AdminSection:NewButton("Infinite Yield", "Infinite Yield is a simple admin", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+--FE
+    local FE = Window:NewTab("FE")
+    local FESection = FE:NewSection("FE")
+    
+   FESection:NewButton("Front and Back Flips", "Front/z Back/x Air/C", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Mazzix8080/Scripts/main/FE%20BackFlip%20and%20FrontFlip'))()
+end)
+
+   FESection:NewButton("R15 Big Head", "Make sure you are R15", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Mazzix8080/Scripts/main/Big%20Head'))()
+end)
+
+   FESection:NewButton("FE Hamster Ball", "Become a fast hamster ball", function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/Mazzix8080/Scripts/main/FE%20Hamster%20Ball'))()
+end)
+
+   FESection:NewButton("FE Spiderman", "Walk on walls, Z to toggle", function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/Mazzix8080/Scripts/main/FE%20Spiderman'))()
+end)
+
+    FESection:NewButton("ConvertWare", "A FE Hub LEFTALT to toggle ui", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/UI/filterware%20ui.lua',true))()
+    end)
+
+    FESection:NewButton("FE Chat Hax", "You can fake people's messages and troll", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Mazzix8080/Scripts/main/Fe%20Chat%20Hax',true))()
+    end)
+
+    FESection:NewButton("FE Spiderman", "Press F9 to see controls", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/ItsDishan/SpidermanScript/main/Spider-Man'), true))()
+    print("Wall Climb - Go up to any wall and press X against the wall and you'll enter climb mode. Either press X again to stop or reach the top (based on how many parts the wall has). Very simple and looks cool since it's got an animation to go with it when climbing. People find it cool especially if you're dressed as Spider-Man.")
+    print("Web Swing - Aim your mouse anywhere and hold Q and click, it's got a cool little animation while swinging too. There's no actual web (yet)")
+    print("When you jump and land now your character will do a Spiderman style pose.")
+    print("When you press Z while standing still then your character will do the Superhero emote. (Spiderman Backflip)")
+    end)
+
+
+--Other
+    local Other = Window:NewTab("Other")
+    local OtherSection = Other:NewSection("Other")
+
+    OtherSection:NewButton("Fps Boost", "Makes your game look bad, but gets alot of fps", function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/Mazzix8080/Scripts/main/Fps%20Boost'))()
+end)
+
+    OtherSection:NewButton("Anti IP Logger", "Blocks sketchy scripts from IP logging you, regular loadstrings work", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Mazzix8080/Scripts/main/Anti%20IP%20Log'))()
+    end)
+
+    OtherSection:NewButton("Cloud Script", "Finds scripts for any game", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/laderite/scripts/main/Cloudscripts.lua'))()
+    end)
+
+    OtherSection:NewButton("Anti Afk", "Cool UI for anti afk", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/main/roblox/__Anti__Afk__Script__", true))()
+    end)
+
+    OtherSection:NewButton("Random Facts", "Makes you chat random facts", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Mazzix8080/Scripts/main/Random%20Facts", true))()
+    end)
+
+    OtherSection:NewButton("Trash Talk", "Trash Talk at a button", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Mazzix8080/Scripts/main/Trash%20Talk", true))()
+    end)
+
+    OtherSection:NewButton("Boblox", "Finds scripts for any games", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MaGiXxScripter/BobloxScripts/main/loader"))()
+    end)
+
+--Settings
+    local Settings = Window:NewTab("Settings")
+    local SettingsSection = Settings:NewSection("Settings")
+
+    SettingsSection:NewKeybind("Toggle UI", "Toggles UI to hide", Enum.KeyCode.RightShift, function()
+	Library:ToggleUI()
+end)
+--Notification
+game.StarterGui:SetCore("SendNotification", {
+Title = "Mazzix Hub Loaded"; -- the title (ofc)
+Text = "Creds to unicornmadness80/Mazzix"; -- what the text says (ofc)
+Icon = "rbxassetid://1521636846"; -- the image if u want. 
+Duration = 5; -- how long the notification should in secounds
+})
